@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="default eldenring-ranni">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Multi-theme web browser start page by Pawel Osmolski.">
+	<title>~/startpage</title>
+	<link rel="icon" type="image/x-icon" href="assets/media/favicon/favicon.ico">
+	<link rel="icon" sizes="192x192" href="assets/media/favicon/android-chrome-192x192.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicon/apple-touch-icon.png">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body class="fade-in jquery search">
+	<a href="#main-content" class="sr-only skip-link">Skip to main content</a>
+
+	<div id="startpage" class="container">
+		<canvas id="canvas" aria-label="Artwork" role="img"></canvas>
+		<div class="container-inner">
+			<header class="left-container" role="banner">
+				<h1 id="Date">&nbsp;</h1>
+
+				<div class="image border">
+					<a href="https://spoopinatural.art" draggable="false" title="portfolio"></a>
+				</div>
+			</header>
+
+			<main id="main-content" class="right-container" role="main">
+				<div class="head">
+					<p>&gt; cd ~/<span class="blinking">_</span></p>
+				</div>
+
+				<div class="head-search">
+					<!-- Search actions:
+						https://www.google.com/search
+					-->
+					<form method="get" action="https://www.google.com/search" autocomplete="off" id="search" role="search">
+						<p>
+							<label id="searchLabel" class="prefix" for="search-input">&gt; search ~/</label>
+							<input class="search-field" id="search-input" type="text" name="q" maxlength="100" aria-labelledby="searchLabel" />
+							<!--
+							<textarea class="search-field" id="search-textarea" wrap="soft" type="text" name="q" maxlength="100" aria-labelledby="searchLabel"></textarea>
+							-->
+							<span class="blinking">_</span>
+						</p>
+					</form>
+				</div>
+
+				<nav class="bookmarks">
+					<div class="category">
+						<div class="links">
+							<ul>
+								<li class="title" role="heading" aria-level="2">GENERAL</li>
+								<li><a href="https://gmail.com">gmail</a></li>
+								<li><a href="https://en.wikipedia.org">wikipedia</a></li>
+								<li><a href="https://netflix.com">netflix</a></li>
+								<li><a href="https://drive.google.com/">drive</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="category">
+						<div class="links">
+							<ul>
+								<li class="title" role="heading" aria-level="2">SOCIAL</li>
+								<li><a href="https://youtube.com">youtube</a></li>
+								<li><a href="https://instagram.com">instagram</a></li>
+								<li><a href="https://reddit.com">reddit</a></li>
+								<li><a href="https://tumblr.com">tumblr</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="category">
+						<div class="links">
+							<ul>
+								<li class="title" role="heading" aria-level="2">COLLEGE</li>
+								<li><a href="https://my.unt.edu">dashboard</a></li>
+								<li><a href="https://outlook.office.com/mail">email</a></li>
+								<li><a href="https://unt.instructure.com/">canvas</a></li>
+								<li><a href="https://augusta.accessiblelearning.com/UNT/dashboard/Default.aspx">accomodations</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</main>
+			<!--
+			<div class="about">
+				<a href="https://spoopinatural.myportfolio.com/">pav-osmolski/startpage</a>
+			</div>
+			-->
+		</div>
+	</div>
+	<script src="assets/js/async-loader.js"></script>
+</body>
+
+</html>

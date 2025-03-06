@@ -1,0 +1,10 @@
+{
+  "name": "Custom new tab",
+  "description": "Overrides the new tab page",
+  "version": "0.1",
+  "incognito": "split",
+  "url_overrides": {
+    "newtab": "index.html"
+  },
+  "manifest_version": 3
+}
