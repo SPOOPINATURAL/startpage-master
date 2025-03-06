@@ -1,18 +1,30 @@
 (function() {
-	function zeroFill(n) {
-		return ('0' + n).slice(-2);
-	}
+    function zeroFill(n) {
+        return ('0' + n).slice(-2);
+    }
 
-	const interval = setInterval(() => {
-		const now = new Date();
+    const interval = setInterval(() => {
+        const now = new Date();
 
-		const dateTime = `${zeroFill(now.getMonth() + 1)}/${zeroFill(now.getDate())}/${now.getFullYear()} ${zeroFill(now.getHours())}:${zeroFill(now.getMinutes())}:${zeroFill(now.getSeconds())}`;
+        // Formatting the date and time using the local timezone
+        const options = { 
+            year: 'numeric', 
+            month: '2-digit', 
+            day: '2-digit', 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit', 
+            hour12: false 
+        };
 
-		const dateElement = document.getElementById("Date");
-		if (dateElement) {
-			dateElement.textContent = dateTime;
-		} else {
-			clearInterval(interval);
-		}
-	}, 100);
+        const dateTime = new Intl.DateTimeFormat(navigator.language, options).format(now).replace(',', '');
+
+        const dateElement = document.getElementById("Date");
+        if (dateElement) {
+            dateElement.textContent = dateTime;
+        } else {
+            clearInterval(interval);
+        }
+    }, 1000); // Adjusted to 1 second to avoid excessive updates
 })();
+
