@@ -7,7 +7,8 @@
         const now = new Date();
 
         // Formatting the date and time using the local timezone
-        const options = { 
+        const dateTime = now.toLocaleString(undefined, { 
+            timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone 
             year: 'numeric', 
             month: '2-digit', 
             day: '2-digit', 
